@@ -61,3 +61,23 @@ main>section[id]{padding:65px 8.2%;border-top:1px solid var(--greige)}.sectionhe
 }
 #contact button[type="submit"] { background: #73675f; font-size: 1rem; margin: 0; cursor: pointer; }
 #contact fieldset:disabled button { cursor: wait; }
+#services .offer { margin: 1rem 0 1.5rem; }
+.offer article { padding: clamp(1.4rem, 3vw, 2.5rem) 0; }
+.offer article + article { border-top: 1px solid var(--greige); }
+.offer h3 { display: flex; align-items: baseline; gap: .8em; margin: 0; font-size: clamp(1.2rem, 2vw, 1.6rem); }
+.offer h3 span { color: var(--wine); font: normal 1rem var(--serif); }
+.offer p { max-width: 48em; margin: .75rem 0 0; font-size: clamp(1rem, 1.2vw, 1.125rem); line-height: 1.9; }
+.textlink { color:var(--wine); text-decoration:underline; text-underline-offset:.3em; }
+.filters { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1rem; }
+.filters button { min-height:44px; padding:.5em 1.2em; color:var(--wine); background:transparent; border:1px solid var(--moka); border-radius:2em; cursor:pointer; font:inherit; }
+.filters button[aria-pressed="true"] { background:var(--wine); color:white; }
+.rates > div { display:grid; grid-template-columns:1fr auto; gap:.25rem 1rem; padding:1rem 0; border-bottom:1px solid var(--greige); }
+.rates dt,.amount { font-weight:600; }
+.rates dd { margin:0; }
+.rates dd:last-child { grid-column:1/-1; }
+.amount { color:var(--wine); }
+#price .button { font-size:1rem; }
+#flow ol { padding-left:2em; }
+#flow li::marker { color:var(--wine); }
+@media(max-width:900px){ header nav {gap:1rem;} }
+@media(max-width:768px){ .sectionhead {flex-wrap:wrap;gap:.25em 1em;} header nav {max-height:75vh;overflow:auto;} }
