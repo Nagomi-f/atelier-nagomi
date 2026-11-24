@@ -5,6 +5,7 @@ const works = [
     "format": "バナー・SNS",
     "medium": "SNS",
     "image": "assets/works/japan-views.png",
+    "alt": "夕日が差す海岸を背景に白と金の文字を配置した旅行画像",
     "description": "夕日の橙と海の青を背景に、白い明朝体と金色の数字を重ねた旅のビジュアルです。"
   },
   {
@@ -12,12 +13,14 @@ const works = [
     "category": "Travel",
     "format": "アイキャッチ画像",
     "image": "assets/works/pink-ganesha.png",
+    "alt": "ピンクのガネーシャ像と周辺の観光地を組み合わせたアイキャッチ画像",
     "description": "ガネーシャ像を中心に観光地の写真を丸く切り抜き、点線で旅のルートを描いています。"
   },
   {
     "title": "大人の肌に、若見えツヤ肌。",
     "category": "Beauty",
     "image": "assets/works/skincare.png",
+    "alt": "ピンクの背景にクリーム容器と商品の特徴を配した化粧品デザイン",
     "description": "淡いピンクの光と透明感のある円で、クリームの質感と商品の特徴を一枚にまとめています。"
   },
   {
@@ -26,6 +29,7 @@ const works = [
     "format": "バナー・SNS",
     "medium": "バナー",
     "image": "assets/works/nagomi-ivory.png",
+    "alt": "生成りの和紙調背景と暖簾の写真を使った開店告知バナー",
     "description": "暖簾のかかった店先と和紙調の地に、金の円相を合わせた開店告知です。"
   },
   {
@@ -34,6 +38,7 @@ const works = [
     "format": "バナー・SNS",
     "medium": "バナー",
     "image": "assets/works/nagomi-black.png",
+    "alt": "墨色の背景に店内と刺身の写真を配した開店告知バナー",
     "description": "墨色と金を基調に、カウンターの灯りと刺身の盛り合わせを配した開店告知です。"
   },
   {
@@ -41,6 +46,7 @@ const works = [
     "category": "Travel",
     "format": "アイキャッチ画像",
     "image": "assets/works/bangkok-guide.png",
+    "alt": "寺院と集合写真に旅行案内を重ねたバンコクのアイキャッチ画像",
     "description": "寺院と集合写真に、旅のスタンプや交通案内のピクトグラムを重ねた旅行ガイドのビジュアルです。"
   }
 ];
@@ -49,7 +55,7 @@ for (const work of works) {
   card.innerHTML = '<summary><span class="thumb"></span><small></small><strong></strong></summary><p></p>';
   const thumb = card.querySelector(".thumb");
   const image = new Image();
-  image.alt = "";
+  image.alt = work.alt || "";
   image.loading = "lazy";
   image.src = work.image;
   thumb.append(image);
